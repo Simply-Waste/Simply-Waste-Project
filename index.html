@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="logo2.png" alt="Top Right Logo" class="logo2">
+    <title>Waste Selling Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="order.html">Orders</a>
+        <a href="track.html">Track Order</a>
+    </nav>
+    <div class="container">
+        <img src="logo.png" alt="Website Logo" class="logo">
+        <h1>Sell Your Waste</h1>
+        <form action="order.html" method="get">
+            <label for="waste-type">Select Waste Type:</label>
+            <select id="waste-type" name="waste-type">
+                <option value="organic">Organic Waste</option>
+                <option value="inorganic">Inorganic Waste</option>
+                <option value="plastic">Plastic Waste</option>
+            </select>
+            <label for="weight">Enter Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
