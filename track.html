@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="logo2.png" alt="Top Right Logo" class="logo2">
+    <title>Track Your Order</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        setTimeout(function () {
+            window.location.href = "delivered.html"; // reach in 5 seconds
+        }, 5000);
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="order.html">Orders</a>
+        <a href="track.html">Track Order</a>
+    </nav>
+    <div class="container">
+        <h1>Tracking Your Order...</h1>
+        
+        <div class="progress-bar">
+            <div class="step completed">✔️ Request Placed</div>
+            <div class="step in-progress">🚚 Out to Reach</div>
+            <div class="step">✅ Collected</div>
+        </div>
+
+        <p>reach within <span id="timer">5</span> seconds...</p>
+
+        <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.5068961402187!2d77.97701357407563!3d10.367292067744284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00a87f69e728df%3A0xb6a2b48db3c18bc5!2sDindigul%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1707975432109!5m2!1sen!2sin" 
+    width="100%" 
+    height="400" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+    </div>
+
+    <script>
+        let timeLeft = 5;
+        let timerElement = document.getElementById("timer");
+        
+        let countdown = setInterval(function () {
+            timeLeft--;
+            timerElement.innerText = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
